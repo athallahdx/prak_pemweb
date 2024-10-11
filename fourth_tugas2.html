@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas4_2</title>
+    <style>
+        #title {
+            text-align: center;
+        }
+
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding-bottom: 30px;
+        }
+
+        button {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .container2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        #hasilHitung {
+            text-align: center;
+        }
+        
+        table, td {
+            border-collapse: collapse;
+            border-spacing: 20px;
+        }
+
+        #kirim {
+            padding-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+       <h1 id="title">Calculator</h1>
+        <div class="container1">
+            <form action="POST" id="numberForm">
+                <table>
+                        <tr>
+                            <td><label for="number1Input">Masukkan Angka Pertama</label></td>
+                            <td>: <input type="text" id="number1Input"></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="number2Input">Masukkan Angka Kedua</label></td>
+                            <td>: <input type="text" id="number2Input"></td>
+                        </tr>
+                </table>
+                <div class="container2">
+                    <button type="button" onclick="calculate('+')"><h3>+</h3></button>
+                    <button type="button" onclick="calculate('-')"><h3>-</h3></button>
+                    <button type="button" onclick="calculate('×')"><h3>×</h3></button>
+                    <button type="button" onclick="calculate('÷')"><h3>÷</h3></button>
+                </div>
+            </form>
+        </div>
+
+       
+
+        <h2 id="title">Hasil:</h2>
+        <h2 id="hasilHitung"></h2>
+
+    <script>
+        const numberInput1 = document.getElementById("number1Input")
+        const numberInput2 = document.getElementById("number2Input")
+
+        numberInput1.addEventListener("input", function() {
+            numberInput1.value = numberInput1.value.replace(/[^0-9.]/g, '');
+
+            if (numberInput1.value.split('.').length > 2) {
+                numberInput1.value = numberInput1.value.slice(0, -1);
+            }
+        });
+
+        numberInput2.addEventListener("input", function() {
+            numberInput2.value = numberInput2.value.replace(/[^0-9.]/g, '');
+
+            if (numberInput2.value.split('.').length > 2) {
+                numberInput2.value = numberInput2.value.slice(0, -1);
+            }
+        });
+
+        function calculate(operation) {
+            const number1 = parseFloat(numberInput1.value);
+            const number2 = parseFloat(numberInput2.value);
+            let hasil;
+
+            switch (operation) {
+                case '+':
+                    hasil = number1 + number2;
+                    break;
+                case '-':
+                    hasil = number1 - number2;
+                    break;
+                case '×':
+                    hasil = number1 * number2;
+                    break;
+                case '÷':
+                    hasil = number1 / number2;
+                    break;
+                default:
+                    hasil = 'Invalid Operation';
+            }
+
+            document.getElementById("hasilHitung").innerText = hasil;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+html, body {
+    background: linear-gradient(#00072D, #1A43BF);
+    height: 100%;
+}
+
+h2{
+    font-family: "Comic Sans MS";
+    background-color: #1A43BF;
+    text-align: center;
+    border-radius: 5px;
+    border: 3px solid black;
+    box-shadow: 5px 10px;
+ 
+}
+table{
+    background-color: grey;
+    margin: 0 auto;
+    padding: 5px;
+    width: 68%;
+    border-width: 0px;
+    box-shadow: 0 4px 8px black;
+    border: 3px black dashed;
+    border-spacing: 15px;
+}
+.kolom1{
+    font-weight: bold;
+    width: 15%;
+}
+.kolom2 {width: 2%;}
+.kolom3 {width: 83%;}
+
+textarea {
+    border: 2px dotted black;
+
+    width: 100%;
+    height: 100px;
+}
+
+#txtNama{
+    border: 3px solid black;
+}
+
+
+#txtNama:hover, #txtNama:focus{
+    border: 4px inset black;
+}
+
+#txtAlamat:focus {
+    border: 3px solid black;
+}
+
+#txtTanggal, #txtBulan, #txtTahun {
+    border: solid black;
+}
+
+#txtTanggal:focus, #txtBulan:focus, #txtTahun:focus {
+    border: 3px dotted black;
+}
+
+#txtKota {
+    border: 3px solid black;
+}
+
+#btnKirim, #btnCancel {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#btnKirim:hover {
+    background-color: rgb(11, 173, 11); 
+    color: white;
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px black;
+}
+
+#btnCancel {
+    background-color: rgb(255, 179, 0); 
+    margin-left: 10px;
+}
+
+#btnCancel:hover {
+    background-color: red; 
+    color: white; 
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px black
+}
+
+
+#txtNama, #txtKota {width: 186px;}
+#txtTgl, #txtBulan {width: 54px;}
+#txtTahun {width: 87px;}
+#txtAlamat {
+    width: 346px;
+    height: 42px;
+}

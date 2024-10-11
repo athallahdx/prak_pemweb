@@ -1,0 +1,81 @@
+body {background: pink;}
+h2{
+    font-family: "Comic Sans MS";
+    background-color: brown;
+    text-align: center;
+}
+table{
+    background: grey;
+    margin: 0 auto;
+    padding: 5px;
+    width: 68%;
+    border-width: 0px;
+}
+.kolom1{
+    font-weight: bold;
+    width: 15%;
+}
+.kolom2 {width: 2%;}
+.kolom3 {width: 83%;}
+
+textarea {
+    border: 2px dotted brown;
+    background-color: burlywood;
+    width: 100%;
+    height: 100px;
+}
+
+input[id="txtNama"]{
+    border: 2px inset brown;
+    background-color:burlywood;
+}
+
+input[id="txtTgl"], input[id="txtBulan"], input[id="txtTahun"]{
+    border: dashed brown;
+    background-color: burlywood; 
+}
+
+input[id="txtKota"]{
+    border: double brown;
+    background-color: burlywood;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: blue; 
+    color: white;
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px black;
+}
+
+input[type="reset"] {
+    background-color: red; 
+    margin-left: 10px;
+}
+
+input[type="reset"]:hover {
+    background-color: orange; 
+    color: white; 
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px black
+}
+
+
+#txtNama, #txtKota {width: 186px;}
+#txtTgl, #txtBulan {width: 54px;}
+#txtTahun {width: 87px;}
+#txtAlamat {
+    width: 346px;
+    height: 42px;
+}

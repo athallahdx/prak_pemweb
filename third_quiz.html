@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+
+         * {
+            box-sizing: border-box;
+         }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #div1 {
+            border: 4px solid black;
+            height: 90px;
+            width: 50%;
+            margin-bottom: 5px;
+        }
+
+        #div2 {
+            display: flex;
+            flex-direction: row;
+            height: 450px;
+            width: 50%;
+            gap: 10px;
+            margin-bottom: 5px;
+        }
+
+        #sub1 {
+            width: 70%;
+            height: 450px;
+            border: 2px solid black;
+        }
+
+        #sub2 {
+            width: 30%;
+            height: 450px;
+            border: 2px solid black;
+        }
+
+        #div3 {
+            border: 7px solid black;
+            height: 70px;
+            width: 50%;
+        }
+
+        #div1:hover, #sub1:hover, #sub2:hover, #div3:hover {
+            border: 2px dashed black;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="div1"></div>
+        <div id="div2">
+            <div id="sub1"></div>
+            <div id="sub2"></div>
+        </div>
+        <div id="div3"></div>
+    </div>
+</body>
+</html>

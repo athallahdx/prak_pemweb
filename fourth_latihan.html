@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan</title>
+</head>
+<body>
+    <form action="POST" id="forml">
+        <table>
+            <tr>
+                <td><label for="nama" name="nama">Nama:</label></td>
+                <td><input type="text" name="nama" id="nama"></td>
+            </tr>
+            <tr>
+                <td><label for="email" name="email">Email:</label></td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td><label for="komentar" name ="komentar">Komentar:</label></td>
+                <td><textarea name="komentar" id="komentar" rows="10" cols="60"></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Simpan"></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        const forml = document.getElementById("forml")
+
+        forml.addEventListener("submit", function(e) {
+
+            const inpNama = document.getElementById("nama").value;
+            const inpEmail = document.getElementById("email").value;
+            const inpKomen = document.getElementById("komentar").value;
+
+            if(inpNama==="" || inpEmail==="" || inpKomen===""){
+                alert("Semua Input belum terisi");
+                e.preventDefault();
+            }
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2</title>
+    <style>
+        div{
+            margin-bottom: 10px;  
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="input1">Input 1: </label>
+            <input type="text" id="input1" readonly>
+        </div>
+
+        <div>
+            <label for="input2">Input 2: </label>
+            <input type="text" id="input2" maxlength="5">
+        </div>
+
+        <div>
+            <label for="input3">Input 3: </label>
+            <input type="text" id="input3" disabled readonly>
+        </div>
+        <div>
+            <label for="input4">Input 4:</label>
+            <input type="text" id="input4" required>
+        </div>
+        <div>
+            <label for="input5">Input 5:</label>
+            <input type="text" id="input5" minlength="9" maxlength="9" pattern="[A-Z0-9]{9}">
+        </div>
+        <div>
+            <input type="submit" id="submitForm" value="Submit">
+        </div>
+    </form>
+    
+</body>
+</html>

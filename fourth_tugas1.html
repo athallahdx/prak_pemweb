@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas4_1</title>
+</head>
+<body>
+    <h1>Nilai Indeks</h1>
+    <form action="POST" id="nilaiForm">
+        <label for="nilai">Masukkan Nilai Anda (Dari 0-100): </label>
+        <input type="text" id="nilai">
+        <input type="submit" id="kirim">
+    </form>
+
+        <h2 id="nilaiHuruf">Nilai Huruf:</h2>
+
+    <script>
+        const nilaiForm = document.getElementById("nilaiForm");
+        const nilaiInput = document.getElementById("nilai");
+
+        nilaiInput.addEventListener("input", function() {
+            nilaiInput.value = nilaiInput.value.replace(/[^0-9]/g, '');
+        });
+
+        nilaiForm.addEventListener("submit", function(e) {
+            e.preventDefault(); 
+
+            let nilaiAngka = +nilaiInput.value;
+            let nilaiHuruf;
+
+
+            if (nilaiAngka >= 0 && nilaiAngka <= 20) {
+                nilaiHuruf = 'E';
+            } else if (nilaiAngka >= 21 && nilaiAngka <= 40) {
+                nilaiHuruf = 'D';
+            } else if (nilaiAngka >= 41 && nilaiAngka <= 60) {
+                nilaiHuruf = 'C';
+            } else if (nilaiAngka >= 61 && nilaiAngka <= 80) {
+                nilaiHuruf = 'B';
+            } else if (nilaiAngka >= 81 && nilaiAngka <= 100) {
+                nilaiHuruf = 'A';
+            } else {
+                nilaiHuruf = 'Nilai tidak valid';
+            }
+
+            const elementNilaiHuruf = document.getElementById("nilaiHuruf");
+            elementNilaiHuruf.innerText = "Nilai Huruf: " + nilaiHuruf;
+        });
+    </script>
+</body>
+</html>
