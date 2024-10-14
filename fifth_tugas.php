@@ -4,48 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator</title>
-    <style>
-        #title {
-            text-align: center;
-        }
-
-        .container1 {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            padding-bottom: 30px;
-        }
-
-        button {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
-
-        .container2 {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        #hasilHitung {
-            text-align: center;
-        }
-        
-        table, td {
-            border-collapse: collapse;
-            border-spacing: 20px;
-        }
-
-        #kirim {
-            padding-top: 20px;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="fifth_tugas.css">
 </head>
 <body>
     <h1 id="title">Calculator</h1>
@@ -54,11 +13,11 @@
             <table>
                 <tr>
                     <td><label for="number1Input">Masukkan Angka Pertama</label></td>
-                    <td>: <input type="number" id="number1Input" name="number1"></td>
+                    <td>: <input type="text" id="number1Input" pattern="-?\d+(\.\d+)?" name="number1"></td>
                 </tr>
                 <tr>
                     <td><label for="number2Input">Masukkan Angka Kedua</label></td>
-                    <td>: <input type="number" id="number2Input" name="number2"></td>
+                    <td>: <input type="text" id="number2Input" pattern="-?\d+(\.\d+)?" name="number2"></td>
                 </tr>
             </table>
             <div class="container2">

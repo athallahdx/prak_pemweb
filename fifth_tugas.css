@@ -1,0 +1,40 @@
+        #title {
+            text-align: center;
+        }
+
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding-bottom: 30px;
+        }
+
+        button {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .container2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        #hasilHitung {
+            text-align: center;
+        }
+        
+        table, td {
+            border-collapse: collapse;
+            border-spacing: 20px;
+        }
+
+        #kirim {
+            padding-top: 20px;
+            text-align: center;
+        }
